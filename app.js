@@ -4,7 +4,7 @@ var topics = ["SUSHI","BURGERS","FRIES","COOKIES","ICE CREAM","SALAD","FRUITS","
 
 function displayButton(){
 	var food = $(this).attr("data-name");
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + food + "&api_key=7b8691fa95a8456cbf0856adc826448d&limit=10&rating=";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + food + "&api_key=7b8691fa95a8456cbf0856adc826448d&limit=10&rating=";
 	
 	$("#food-view").empty();
 
@@ -75,7 +75,7 @@ $("#add-food").on("click", function(event){
 	//Calling create button to go through our topic array
 	createButton();
 });
-
+	//This will turn on and off the giphy image from still to moving and back to still
 	function animationToggle(){
 	var state = $(this).attr("data-state");
 	if (state === "still") {
